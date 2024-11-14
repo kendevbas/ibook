@@ -1,0 +1,23 @@
+@use 'pages/admin/admin.scss';
+@use 'pages/customer/customers.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+html, body{          
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+::selection{
+    background-color: blue;
+    color: rgb(0, 191, 255);
+}
+
+a{
+    text-decoration: none;
+}
