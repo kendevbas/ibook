@@ -1,22 +1,7 @@
 body, html {
     height: 100%;
     margin: 0;
-}
-
-body {
-    position: relative;
-    background: url('../assets/images/library.jpeg') no-repeat center center / cover;
-}
-
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
-    z-index: -1;
+    background-color: rgb(78, 1, 78);
 }
 
 .index-title{
@@ -40,7 +25,6 @@ body::before {
 }
 
 .index-container h1{
-    background: url('../assets/images/titleImage.jpg');
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -65,10 +49,6 @@ body::before {
 }
 
 .admin{
-    background: url('../assets/images/admin.webp');
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
     font-size: 30px;
     font-weight: bold;
     border: 1px solid rgb(54, 12, 112);
@@ -76,10 +56,6 @@ body::before {
 }
 
 .customer{
-    background: url('../assets/images/customer.webp');
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
     font-size: 30px;
     font-weight: bold;
     border: 1px solid rgb(54, 12, 112);

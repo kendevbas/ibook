@@ -1,3 +1,66 @@
-.wrapper{
-    color: red;
+header{
+    background-color: #023b6d;
+    height: 50px;
+}
+
+.align{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.admin-area{
+    margin-left: auto;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.title img{
+    width: 45px;
+    height: 45px;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 31px;
+    position: relative;
+    transform: translateX(-6px);
+  }
+  
+  .hamburger .line {
+    height: 3px;
+    background-color: black;
+    width: 100%;
+    transition: all 0.3s ease;
+    display: flex;
+  }
+
+  .header-search{
+    margin-left: 20px;
+  }
+
+/* Стили для анимации гамбургера в стрелку вниз */
+.hamburger.active .line:nth-child(1) {
+    transform: rotate(25deg) translate(9px, 12px); /* Верхняя линия становится частью стрелки */
+}
+
+.hamburger.active .line:nth-child(2) {
+  opacity: 0; /* Скрываем среднюю линию */
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: rotate(-30deg) translate(15px, -18px); /* Нижняя линия становится частью стрелки */
 }

@@ -26,7 +26,7 @@ function scripts() {
       .pipe(terser())
       .pipe(rename({ extname: '.min.js' }))
       .pipe(sourcemaps.write('./js_map'))
-      .pipe(gulp.dest('dist/js'))
+      .pipe(gulp.dest('dist/scripts'))
       .pipe(server.stream());
 }
 
@@ -86,7 +86,6 @@ function moveImages() {
 // Обработка всех HTML файлов и их включение в `dist`
 function pages() {
     return gulp.src('src/templates/**/*.html')
-        .pipe(include({ includePaths: './src/html_components' }))
         .pipe(gulp.dest('dist'))
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest('dist/html_min'))
@@ -105,7 +104,7 @@ function minifyJs() {
     return gulp.src('src/scripts/**/*.js')
       .pipe(terser())
       .pipe(rename({ extname: '.min.js' }))
-      .pipe(gulp.dest('dist/script_min'))
+      .pipe(gulp.dest('dist/scripts_min'))
       .pipe(server.stream());
 }
 

@@ -1,5 +1,4 @@
-@use 'pages/admin/admin.scss';
-@use 'pages/customer/customers.scss';
+
 
 * {
     box-sizing: border-box;
@@ -11,6 +10,7 @@ html, body{
     border: 0;
     font-size: 100%;
     vertical-align: baseline;
+
 }
 
 ::selection{
@@ -20,4 +20,8 @@ html, body{
 
 a{
     text-decoration: none;
+}
+
+li{
+    list-style: none;
 }
