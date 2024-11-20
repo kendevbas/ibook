@@ -1,0 +1,113 @@
+header{
+    background-color: #023b6d;
+    height: 50px;
+    padding: 0 10px;
+}
+
+.align{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.admin-area{
+    margin-left: auto;
+    gap: var(--gap);
+}
+
+.admin-account{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+  font-size: 16px;
+}
+
+.notification{
+  max-height: 35px;
+}
+
+.chat{
+  max-height: 35px;
+  width: 30px;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.title img{
+    width: 45px;
+    height: 45px;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 31px;
+    position: relative;
+    transform: translateX(-6px);
+  }
+  
+  .hamburger .line {
+    height: 3px;
+    background-color: black;
+    width: 100%;
+    transition: all 0.3s ease;
+    display: flex;
+  }
+
+  .input-search{
+    height: 30px;
+    width: 300px;
+    background: url('../assets/icons/search.svg');
+    background-repeat: no-repeat;
+    padding: 10px 10px 10px 40px;
+    background-size: 16px;
+    background-position-y: center;
+    background-position-x: 10px;
+    border-radius: 4px;
+    border: #e2e2e2 solid 1px;
+    background-color: white;
+  
+  }
+
+  .input-search::placeholder{
+    color: rgb(46, 46, 46);
+    font-size: 14px;
+    opacity: 0.8;
+
+  }
+
+  .header-search{
+    margin-left: 20px;
+  }
+
+
+// .hamburger.active .line:nth-child(1) {
+//     transform: rotate(25deg) translate(9px, 12px); 
+// }
+
+// .hamburger.active .line:nth-child(2) {
+//     opacity: 0;
+// }
+
+// .hamburger.active .line:nth-child(3) {
+//     transform: rotate(-30deg) translate(15px, -18px);
+// }
+
+.image{
+  border-radius: 50%;
+  max-height: 40px;
+}
