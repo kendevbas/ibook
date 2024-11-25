@@ -1,25 +1,30 @@
 header{
-    background-color: #023b6d;
-    height: 50px;
-    padding: 0 10px;
+  background-color: #023b6d;
+  height: 50px;
+  padding: 0 10px;
+  position: relative;
 }
 
 .align{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .header-left{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 300px;
 }
 
 .admin-area{
-    margin-left: auto;
-    gap: var(--gap);
+  margin-left: auto;
+  gap: var(--gap);
+}
+
+.h2Title{
+  color: black;
 }
 
 .admin-account{
@@ -33,6 +38,7 @@ header{
 
 .notification, .chat{
   max-height: 35px;
+  cursor: pointer;
 }
 
 .title {
@@ -45,49 +51,51 @@ header{
 }
 
 .hamburger {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 20px;
-    width: 31px;
-    position: relative;
-    transform: translateX(-6px);
-  }
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  width: 31px;
+  position: relative;
+  transform: translateX(-6px);
+}
   
-  .hamburger .line {
-    height: 3px;
-    background-color: black;
-    width: 100%;
-    transition: all 0.3s ease;
-    display: flex;
-  }
+.hamburger .line {
+  height: 3px;
+  background-color: black;
+  width: 100%;
+  transition: all 0.3s ease;
+  display: flex;
+}
 
-  .input-search{
-    height: 30px;
-    width: 300px;
-    background: url('../assets/icons/search.svg');
-    background-repeat: no-repeat;
-    padding: 10px 10px 10px 40px;
-    background-size: 16px;
-    background-position-y: center;
-    background-position-x: 10px;
-    border-radius: 4px;
-    border: #e2e2e2 solid 1px;
-    background-color: white;
-  
-  }
+.input-search{
+  height: 30px;
+  width: 300px;
+  background: url('../assets/icons/search.svg');
+  background-repeat: no-repeat;
+  padding: 10px 10px 10px 40px;
+  background-size: 16px;
+  background-position-y: center;
+  background-position-x: 10px;
+  border-radius: 4px;
+  border: #e2e2e2 solid 1px;
+  background-color: white;
+}
 
-  .input-search::placeholder{
-    color: rgb(46, 46, 46);
-    font-size: 14px;
-    opacity: 0.8;
+.mediaSearch{
+  display: none;
+}
 
-  }
+.input-search::placeholder{
+  color: rgb(46, 46, 46);
+  font-size: 14px;
+  opacity: 0.8;
+}
 
-  .header-search{
-    margin-left: 20px;
-  }
+.header-search{
+  margin-left: 20px;
+}
 
 
 // .hamburger.active .line:nth-child(1) {
@@ -105,4 +113,99 @@ header{
 .image{
   border-radius: 50%;
   max-height: 40px;
+}
+
+.container-modalNotif{
+  display: flex;
+  background-color: white;
+  position: absolute;
+  top: 50px;
+  right: 140px;
+  font-size: 14px;
+}
+
+.modalNotification{
+  display: none;
+  padding: 10px 0;
+  max-width: 400px;
+}
+
+.modalNotif-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.modalNotif-text{
+  font-weight: 600;
+}
+
+.modalNotif-btn{
+  background-color: blue;
+  border-radius: 10px;
+  padding: 2px 5px;
+  font-size: 13px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal-border{
+  border-bottom: rgb(199, 199, 199) 1px solid;
+}
+
+.notifMessage{
+  display: flex;
+  flex-direction: column;
+}
+
+.notifTitle{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.notifText{
+  white-space: pre-line;
+}
+
+.padding{
+  padding: 10px 10px;
+}
+.modalRow{
+  display: flex;
+  flex-direction: row;
+}
+
+.modalImg{
+  padding-right: 15px;
+}
+
+.green{
+  color: green;
+}
+
+.orange{
+  color: rgb(255, 47, 0);
+}
+
+@media screen and (max-width: 810px){
+    .header-left{
+      width: 200px;
+    }
+    .input-search{
+      width: 250px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .input-search{
+      display: none;
+    }
+    .mediaSearch{
+      display: block;
+      width: 28px;
+    }
 }

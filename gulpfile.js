@@ -108,6 +108,15 @@ function minifyJs() {
       .pipe(server.stream());
 }
 
+function processUtils() {
+    return gulp.src('src/scripts/utils.js')
+        .pipe(babel({ presets: ['@babel/preset-env'] }))
+        .pipe(terser())
+        .pipe(rename({ extname: '.min.js' }))
+        .pipe(gulp.dest('dist/scripts_min'))
+        .pipe(server.stream());
+}
+
 // Запуск локального сервера
 function serve(done) {
     server.init({
@@ -124,6 +133,7 @@ function watchFiles() {
     gulp.watch('dist/html_min/**/*.html').on('change', server.reload);
     gulp.watch('src/scripts/**/*.js', scripts);
     gulp.watch('src/assets/**/*', moveImages);
+    gulp.watch('src/scripts/utils.js', processUtils);
 }
 
 // Экспортируем задачи
@@ -135,6 +145,7 @@ export {
     minifyHtml,
     minifyJs,
     serve,
+    processUtils,
     watchFiles,
     compileIndexSass,
     compileAdminPageSass,
@@ -142,12 +153,12 @@ export {
 };
 
 export const launch = gulp.series(
-    gulp.parallel(pages, compileSass,compileIndexSass, compileAdminPageSass, compileCustomerPageSass, moveImages, scripts),
+    gulp.parallel(pages, compileSass,compileIndexSass, compileAdminPageSass, compileCustomerPageSass, moveImages, scripts, processUtils),
     gulp.parallel(minifyHtml, minifyJs)
 )
 
 // Задача по умолчанию, которая запускает все функции
 export default gulp.series(
-    gulp.parallel(pages, compileSass, compileIndexSass, compileAdminPageSass, compileCustomerPageSass, moveImages, scripts),
+    gulp.parallel(pages, compileSass, compileIndexSass, compileAdminPageSass, compileCustomerPageSass, moveImages, scripts, processUtils),
     gulp.parallel(minifyHtml, minifyJs), serve, watchFiles
 );

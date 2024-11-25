@@ -15,6 +15,16 @@ body, html {
     font-weight: bold;
 }
 
+.index-title img{
+    transition: 3s all;
+}
+
+.index-title img:hover{
+    transform: scale(1.5);
+    transition: 3s all;
+    
+}
+
 .index-container {
     display: flex;
     flex-direction: column;
@@ -27,7 +37,6 @@ body, html {
 .index-container h1{
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
     font-size: 30px;
     font-weight: bold;
 }
