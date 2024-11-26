@@ -55,7 +55,7 @@ function compileIndexSass() {
 
 // Функция для компиляции SCSS файлов для страниц admin
 function compileAdminPageSass() {
-    return gulp.src('src/styles/pages/admin/admin_main.scss')
+    return gulp.src('src/styles/pages/admin/admin-page.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(autoprefixer())
@@ -67,7 +67,7 @@ function compileAdminPageSass() {
 
 // Функция для компиляции SCSS файлов для страниц customer
 function compileCustomerPageSass() {
-    return gulp.src('src/styles/pages/customer/customer_main.scss')
+    return gulp.src('src/styles/pages/customer/customer-page.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(autoprefixer())
